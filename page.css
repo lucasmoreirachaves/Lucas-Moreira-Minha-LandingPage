@@ -1,0 +1,534 @@
+/* ===================== GERAL ===================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0%;
+}
+
+.selo-titulo {
+    display: inline-block;
+    background-color: #1e1e1e;
+    padding: 15px 30px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+
+    transition: transform 0.3s ease;
+}
+
+.selo-titulo:hover {
+    transform: scale(1.08);
+}
+
+.selo-titulo h2 {
+    margin: 0;
+    font-size: 32px;
+    color: #ffffff;
+}
+
+
+
+/* ===================== HEADER ===================== */
+
+header {
+    background-color: #1e1e1e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    z-index: 1000;
+}
+
+.logo-link {
+    text-decoration: none;
+    display: inline-block;
+    position: absolute;
+    left: -5%;
+    top: 10px;
+
+    transition: transform 0.3s ease;
+}
+
+.logo-link:hover {
+    transform: scale(1.1);
+}
+
+
+header img {
+    position: static;
+    width: 280px;
+
+    animation: entradaLogo 0.8s ease-out;
+}
+
+nav {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0 15px;
+    border-right: 1px solid #ffffff;
+    font-size: 20px;
+
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:last-child {
+    border-right: none;
+}
+
+nav a:hover {
+    color: #7ea8e0;
+    transform: scale(1.15);
+}
+
+/* Animação de entrada da logo */
+@keyframes entradaLogo {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade do header */
+@media (max-width: 768px) {
+    header {
+        height: 90px;
+    }
+
+    header img {
+        width: 160px;
+    }
+
+    header a {
+        left: 10px;
+    }
+
+    nav {
+        right: 10px;
+        top: 30px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 0 8px;
+    }
+}
+
+/* ===================== MAIN ===================== */
+
+main {
+    background-color: #071628;
+    color: #ffffff;
+    padding-top: 140px;
+}
+
+section#biografia,
+section#projetos,
+section#certificados,
+section#contato {
+    scroll-margin-top: 140px;
+}
+
+
+/* ----- Biografia ----- */
+
+section#biografia {
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+section#biografia h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.biografia-conteudo {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    text-align: left;
+}
+
+.biografia-foto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.biografia-foto img {
+    width: 220px;
+    border-radius: 15px;
+}
+
+.biografia-texto p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.btn-contato {
+    margin-top: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #e5e0e0;
+    color: #0d2b52;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.btn-contato img {
+    width: 20px;
+}
+
+.btn-contato:hover {
+    background-color: #cccccc;
+    transform: scale(1.08);
+}
+
+
+/* ----- Meus Projetos ----- */
+
+section#projetos {
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.projeto-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 120px;
+    text-align: left;
+}
+
+.projeto-card:nth-child(3) {
+    flex-direction: row-reverse;
+}
+
+.projeto-card img {
+    width: 280px;
+    border-radius: 15px;
+    flex-shrink: 0;
+}
+
+.projeto-texto h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.projeto-texto p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.btn-projeto {
+    display: inline-block;
+    background-color: #e5e0e0;
+    color: #0d2b52;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.btn-projeto:hover {
+    background-color: #cccccc;
+    transform: scale(1.08);
+}
+
+
+/* ----- Trajetória Acadêmica ----- */
+
+section#biografia-trajetoria {
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.timeline {
+    position: relative;
+    height: 220px;
+    margin: 0 40px;
+    padding: 0;
+    list-style: none;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #ffffff;
+}
+
+.timeline-item {
+    position: absolute;
+    width: 220px;
+    text-align: center;
+}
+
+.timeline-item:nth-child(1) { left: 0%; top: 0px; }
+.timeline-item:nth-child(2) { left: 27%; top: 100px; }
+.timeline-item:nth-child(3) { left: 54%; top: 0px; }
+.timeline-item:nth-child(4) { left: 81%; top: 100px; }
+
+.timeline-item .ano {
+    display: block;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+
+/* ----- Certificados ----- */
+
+section#certificados {
+    padding: 40px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+section#certificados img {
+    width: 900px;
+    max-width: 90%;
+    border-radius: 10px;
+}
+
+
+/* ----- Skills ----- */
+
+section#skills {
+    padding: 40px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+.skills-conteudo {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    text-align: left;
+}
+
+.skills-coluna h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    display: inline-block;
+    border-bottom: 2px solid #7ea8e0;
+    padding-bottom: 6px;
+}
+
+.skills-coluna ul {
+    font-size: 16px;
+    line-height: 1.8;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-coluna li {
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.skills-coluna li:last-child {
+    border-bottom: none;
+}
+
+.skills-coluna li:hover {
+    color: #7ea8e0;
+    transform: translateX(8px);
+}
+
+
+/* ----- Contato ----- */
+
+section#contato {
+    padding: 40px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+section#contato form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+section#contato label {
+    align-self: flex-start;
+    display: inline-block;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 8px 18px;
+    border-radius: 12px;
+    margin-bottom: 4px;
+}
+
+section#contato input,
+section#contato textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+section#contato .botoes-contato {
+    display: flex;
+    gap: 10px;
+}
+
+section#contato button {
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #e5e0e0;
+    color: #0d2b52;
+
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+section#contato button[type="submit"]:hover {
+    background-color: #4caf50;
+    color: #ffffff;
+    transform: scale(1.08);
+}
+
+section#contato button[type="reset"]:hover {
+    background-color: #e05252;
+    color: #ffffff;
+    transform: scale(1.08);
+}
+
+
+/* ===================== FOOTER ===================== */
+
+footer {
+    background-color: #1e1e1e;
+    padding: 30px 40px;
+}
+
+.footer-topo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.footer-topo .frase {
+    margin-left: auto;
+}
+
+footer img {
+    width: 240px;
+    margin-left: -20px;
+}
+
+footer .frase {
+    color: #ffffff;
+    font-size: 20px;
+    margin: 0;
+}
+
+.footer-base {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+footer .redes-sociais {
+    display: flex;
+    gap: 20px;
+}
+
+footer .redes-sociais img {
+    width: 24px;
+}
+
+footer .redes-sociais a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.footer-textos {
+    text-align: right;
+}
+
+footer .copyright {
+    color: #ffffff;
+    font-size: 16px;
+    margin: 0 0 8px 0;
+}
+
+footer .politica {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.btn-cor {
+    background: none;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: 18px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 10px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-cor:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: scale(1.1);
+}
+
+.btn-cor:active {
+    transform: scale(0.96);
+}
+
+

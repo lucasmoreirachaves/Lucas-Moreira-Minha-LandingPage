@@ -1,0 +1,41 @@
+Landing Page (index.html)
+│
+├── Header (fixo)
+│   ├── Logo ........................ volta ao topo (#topo)
+│   └── Menu
+│       ├── Botão modo claro/escuro (🌙 / ☀️)
+│       ├── Biografia ............... #biografia
+│       ├── Projetos ................ #projetos
+│       ├── Certificados ............ #certificados
+│       └── Contato ................. #contato
+│
+├── Main
+│   ├── Sobre Mim (#biografia)
+│   │   ├── Foto
+│   │   ├── Texto de apresentação
+│   │   └── Botão "Entre em contato" → #contato
+│   │
+│   ├── Meus Projetos (#projetos)
+│   │   ├── LogosThekne → botão "Ver Projeto"
+│   │   └── Calculadora → botão "Ver Projeto"
+│   │
+│   ├── Trajetória Acadêmica (#biografia-trajetoria)
+│   │   └── Linha do tempo: 2022, 2025, 2025, 2026
+│   │
+│   ├── Certificados (#certificados)
+│   │   └── Imagem dos certificados
+│   │
+│   ├── Skills (#skills)
+│   │   ├── SoftSkills
+│   │   └── HardSkills
+│   │
+│   └── Contato (#contato)
+│       └── Formulário
+│           ├── Nome, E-mail, Telefone, Observação
+│           ├── reCAPTCHA
+│           └── Botões: Enviar / Limpar
+│
+└── Footer
+    ├── Logo + frase "Desenvolvedor em formação"
+    ├── Redes sociais: WhatsApp, LinkedIn
+    └── Copyright + Política de Privacidade
